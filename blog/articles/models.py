@@ -5,7 +5,8 @@ from django.db import models
 
 class Articles(models.Model):
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=100)
+    text = models.TextField(max_length=100)
+    date_create = models.DateTimeField('data criacao')
 
     def __unicode__(self):
         return u'%s' % self.title
